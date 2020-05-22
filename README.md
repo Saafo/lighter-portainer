@@ -5,7 +5,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/portainer/portainer.svg)](https://hub.docker.com/r/portainer/portainer/)
 [![Microbadger](https://images.microbadger.com/badges/image/portainer/portainer.svg)](http://microbadger.com/images/portainer/portainer 'Image size')
 
-**_lighter-portainer_** is a web management UI for **_lighterDOCK_**, based on **_Portainer_**.
+**_lighter-Portainer_** is a web management UI for **_lighterDOCK_**, based on **_Portainer_**.
 
 **_lighterDOCK_** is a lightweight docker aimed at edge computing gateway/server.
 
@@ -16,11 +16,14 @@
 ## Getting started
 
 - [Deploy lighter-Portainer](https://www.portainer.io/installation/)
+- [Build lighter-Portainer locally](https://www.portainer.io/documentation/how-to-contribute/)
+  - Install the 5 packages below before executing `yarn`
+    * apt install libtool automake autoconf nasm libpng-dev
 - [Documentation](https://www.portainer.io/documentation/)
 
 ## Limitations
 
-Portainer supports lighterDOCK only. The Docker may operate, however these are not supported.
+lighter-Portainer supports lighterDOCK only. The Docker may operate, however it is not supported.
 
 ## Licensing
 
