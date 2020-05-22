@@ -118,7 +118,7 @@ a[ng-click] {
 .fa.tooltip-icon {
   margin-left: 5px;
   font-size: 1.3em;
-  color: #337ab7;
+  color: #5150e5;
 }
 
 .fa.green-icon {
@@ -139,7 +139,7 @@ a[ng-click] {
 
 .fa.blue-icon,
 .fab.blue-icon {
-  color: #337ab7;
+  color: #5150e5;
 }
 
 .text-warning {
@@ -288,6 +288,11 @@ a[ng-click] {
   margin-right: 2px;
 }
 
+.btn-primary {
+  background: linear-gradient(59deg, #1f98ea, #5150e4);
+  border-color: #5150e5;
+}
+
 .btn-responsive {
   padding: 5px 10px;
   font-size: 12px;
@@ -368,12 +373,18 @@ ul.sidebar {
 
 ul.sidebar .sidebar-title {
   height: auto;
+  color: #fff;
 }
 
 ul.sidebar .sidebar-title.endpoint-name {
   color: #fff;
   text-align: center;
   text-indent: 0;
+}
+
+ul.sidebar .sidebar-list a:hover {
+  background: linear-gradient(60deg, #1f98ea, #5150e4);
+  border-left: 3px solid #5150e4;
 }
 
 ul.sidebar .sidebar-list a {
@@ -384,7 +395,7 @@ ul.sidebar .sidebar-list a.active {
   color: #fff;
   text-indent: 22px;
   border-left: 3px solid #fff;
-  background: #2d3e63;
+  background: linear-gradient(60deg, #5150e4, #1f98ea);
 }
 
 .sidebar-header {
@@ -393,6 +404,7 @@ ul.sidebar .sidebar-list a.active {
   text-indent: 20px;
   font-size: 18px;
   background: #2d3e63;
+  background: linear-gradient(170deg, #1f98ea, #5150e4);
 }
 
 .sidebar-header a {
@@ -441,6 +453,7 @@ ul.sidebar .sidebar-list a.active {
 #sidebar-wrapper {
   display: flex;
   flex-flow: column;
+  background: linear-gradient(60deg, #1f98ea, #337ab7);
 }
 
 .sidebar-content {
@@ -698,14 +711,14 @@ ul.sidebar .sidebar-list .sidebar-sublist a.active {
 }
 
 .boxselector_wrapper input[type='radio']:checked + label {
-  background: #337ab7;
+  background: linear-gradient(59deg, #1f98ea, #5150e4);
   color: white;
   padding-top: 2rem;
-  border-color: #337ab7;
+  border-color: #5150e5;
 }
 
 .boxselector_wrapper input[type='radio']:checked + label::after {
-  color: #337ab7;
+  color: #5150e5;
   font-family: 'Font Awesome 5 Free';
   border: 2px solid #337ab7;
   content: '\f00c';
@@ -854,7 +867,7 @@ ul.sidebar .sidebar-list .sidebar-sublist a.active {
 .tag {
   padding: 2px 6px;
   color: white;
-  background-color: #337ab7;
+  background-color: #5150e5;
   border: 1px solid #2e6da4;
   border-radius: 4px;
 }
@@ -906,14 +919,14 @@ ul.sidebar .sidebar-list .sidebar-sublist a.active {
 }
 
 .multiSelect .multiSelectItem:not(.multiSelectGroup).selected {
-  background-image: linear-gradient(#337ab7, #337ab7);
+  background-image: linear-gradient(59deg, #1f98ea, #5150e4);
   color: #fff;
   border: none;
 }
 
 .multiSelect .multiSelectItem:hover,
 .multiSelect .multiSelectGroup:hover {
-  background-image: linear-gradient(#337ab7, #337ab7) !important;
+  background-image: linear-gradient(59deg, #1f98ea, #5150e4) !important;
   color: #fff !important;
 }
 

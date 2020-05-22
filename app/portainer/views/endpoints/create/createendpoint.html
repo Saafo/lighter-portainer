@@ -44,16 +44,6 @@
                   <p>Directly connect to the Docker API</p>
                 </label>
               </div>
-              <div>
-                <input type="radio" id="azure_endpoint" ng-model="state.EnvironmentType" value="azure" />
-                <label for="azure_endpoint">
-                  <div class="boxselector_header">
-                    <i class="fab fa-microsoft" aria-hidden="true" style="margin-right: 2px;"></i>
-                    Azure
-                  </div>
-                  <p>Connect to Microsoft Azure ACI</p>
-                </label>
-              </div>
             </div>
           </div>
           <div ng-if="state.EnvironmentType === 'docker'">

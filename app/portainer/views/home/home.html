@@ -7,8 +7,6 @@
   <rd-header-content>Endpoints</rd-header-content>
 </rd-header>
 
-<motd-panel ng-if="motd && motd.Message !== '' && applicationState.UI.dismissedInfoHash !== motd.Hash" motd="motd" dismiss-action="dismissImportantInformation(motd.Hash)">
-</motd-panel>
 
 <information-panel ng-if="!isAdmin && endpoints.length === 0" title-text="Information">
   <span class="small text-muted">

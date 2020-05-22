@@ -26,7 +26,7 @@
 }
 
 .datatable .toolBar .setting-active {
-  color: #337ab7;
+  color: #5150e5;
 }
 
 .datatable .searchBar {
@@ -169,7 +169,7 @@
 }
 
 .md-checkbox input[type='checkbox']:checked + label:before {
-  background: #337ab7;
+  background: linear-gradient(59deg, #1f98ea, #5150e4);
   border: none;
 }
 
@@ -204,7 +204,7 @@
 
 .md-radio input[type='radio']:checked + label:before {
   animation: ripple 0.2s linear forwards;
-  border-color: #337ab7;
+  border-color: #5150e5;
 }
 
 .md-radio input[type='radio']:checked + label:after {
@@ -240,7 +240,7 @@
 }
 
 .md-radio label:after {
-  background: #337ab7;
+  background: linear-gradient(59deg, #1f98ea, #5150e4);
   height: 8px;
   left: 4px;
   top: 4px;
