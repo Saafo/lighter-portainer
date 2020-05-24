@@ -2,8 +2,9 @@
   <img title="lightDOCK" src='https://github.com/saafo/lighter-portainer/blob/develop/assets/images/logo_alt.png?raw=true' />
 </p>
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/portainer/portainer.svg)](https://hub.docker.com/r/portainer/portainer/)
-[![Microbadger](https://images.microbadger.com/badges/image/portainer/portainer.svg)](http://microbadger.com/images/portainer/portainer 'Image size')
+[![Image Size](https://img.shields.io/docker/image-size/saafo/lighter-portainer)](https://hub.docker.com/r/saafo/lighter-portainer)
+[![Microbadger](https://img.shields.io/microbadger/layers/saafo/lighter-portainer)](http://microbadger.com/images/saafo/lighter-portainer)
+[![Build Status](https://img.shields.io/docker/cloud/automated/saafo/lighter-portainer?color=deepgreen&logo=docker)](https://hub.docker.com/r/saafo/lighter-portainer/builds)
 
 **_lighter-Portainer_** is a web management UI for **_lighterDOCK_**, based on **_Portainer_**.
 
