@@ -5,9 +5,9 @@ ARCHIVE_BUILD_FOLDER="/tmp/lighter-portainer-builds"
 # parameter: "platform-architecture"
 function build_and_push_images() {
   docker build -t "saafo/lighter-portainer:$1-${VERSION}" -f build/linux/Dockerfile .
-  docker tag  "saafo/lighter-portainer:$1-${VERSION}" "saafo/lighter-portainer:$1"
-  docker push "saafo/lighter-portainer:$1-${VERSION}"
-  docker push "saafo/lighter-portainer:$1"
+#  docker tag  "saafo/lighter-portainer:$1-${VERSION}" "saafo/lighter-portainer:$1"
+#  docker push "saafo/lighter-portainer:$1-${VERSION}"
+#  docker push "saafo/lighter-portainer:$1"
 }
 
 # parameter: "platform-architecture"
@@ -24,11 +24,12 @@ function build_archive() {
 function build_all() {
   mkdir -pv "${ARCHIVE_BUILD_FOLDER}"
   for tag in $@; do
-    yarn grunt "release:`echo "$tag" | tr '-' ':'`"
+#    yarn grunt "release:`echo "$tag" | tr '-' ':'`"
+    yarn grunt build
     name="lighter-portainer"; if [ "$(echo "$tag" | cut -c1)"  = "w" ]; then name="${name}.exe"; fi
     mv dist/portainer-$tag* dist/$name
     if [ `echo $tag | cut -d \- -f 1` == 'linux' ]; then build_and_push_images "$tag"; fi
-    build_archive "$tag"
+#    build_archive "$tag"
   done
   docker rmi $(docker images -q -f dangling=true)
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html
+><html lang="en" ng-app="portainer">
+  <head>
+    <meta charset="utf-8" />
+    <title>lighterDOCK</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Portainer.io" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="34de99f33f454d48d9e60795beb32c2d.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="a79ef3945b8c429fb265992cbd84baf9.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="9fe9fc8f86fde408d5fc393f8f6e8c94.png" />
+    <link rel="mask-icon" href="2823263669001b273a93c13af7d47aa4.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="cc94dccbed86ef5892ea042fa33d2ba5.ico" />
+    <meta name="msapplication-config" content="4806ce9049e1e082dd3da4063ceb0eea.xml" />
+    <meta name="theme-color" content="#ffffff" />
+  <link href="vendor.vendor.css" rel="stylesheet"><link href="main.9030128c329228397fee.css" rel="stylesheet"></head>
+
+  <body ng-controller="MainController">
+    <div
+      id="page-wrapper"
+      ng-class="{
+        open: toggle && ['portainer.auth', 'portainer.updatePassword', 'portainer.init.admin', 'portainer.init.endpoint'].indexOf($state.current.name) === -1,
+        nopadding: ['portainer.auth', 'portainer.updatePassword', 'portainer.init.admin', 'portainer.init.endpoint'].indexOf($state.current.name) > -1 || applicationState.loading
+      }"
+      ng-cloak
+    >
+      <div id="sideview" ui-view="sidebar" ng-if="!applicationState.loading"></div>
+
+      <div id="content-wrapper">
+        <div class="page-content">
+          <div class="page-wrapper" ng-if="applicationState.loading">
+            <!-- loading box -->
+            <div class="container simple-box">
+              <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                <!-- loading box logo -->
+                <div class="row">
+                  <img ng-if="logo" ng-src="{{ logo }}" class="simple-box-logo" />
+                  <img ng-if="!logo" src="29c5ddd43c0cd94e7f16b93a2380c5dd.png" class="simple-box-logo" alt="Portainer" />
+                </div>
+                <!-- !loading box logo -->
+                <!-- panel -->
+                <div class="row" style="text-align: center;">
+                  Loading lighterDOCK...
+                  <i class="fa fa-cog fa-spin" style="margin-left: 5px;"></i>
+                </div>
+                <!-- !panel -->
+              </div>
+            </div>
+            <!-- !loading box -->
+          </div>
+
+          <!-- Main Content -->
+          <div id="view" ui-view="content" ng-if="!applicationState.loading"></div> </div
+        ><!-- End Page Content --> </div
+      ><!-- End Content Wrapper --> </div
+    ><!-- End Page Wrapper -->
+  <script type="text/javascript" src="vendor.9030128c329228397fee.js"></script><script type="text/javascript" src="main.9030128c329228397fee.js"></script></body></html
+>
