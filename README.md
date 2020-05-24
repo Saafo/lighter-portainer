@@ -15,10 +15,42 @@
 
 ## Getting started
 
-- [Deploy lighter-Portainer](https://www.portainer.io/installation/)
+- Deploy lighter-Portainer
+
+  ```bash
+  docker pull saafo/lighter-portainer
+  ```
+
+  * Use `docker-compose` to deploy:
+  
+  Create file `docker-compose.yml`:
+
+  ```yaml
+  version: '3'
+  services:
+    portainer:
+      image: saafo/lighter-portainer:latest
+      restart: always
+      ports:
+        - 9000:9000
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+  ```
+
+  * Use `docker` to deploy:
+
+  ```bash
+  docker run -d -p 9000:9000 \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    saafo/lighter-portainer
+  ```
+
 - [Build lighter-Portainer locally](https://www.portainer.io/documentation/how-to-contribute/)
   - Install the 5 packages below before executing `yarn`
-    * apt install libtool automake autoconf nasm libpng-dev
+      ```bash
+      apt install libtool automake autoconf nasm libpng-dev
+      ```
 - [Documentation](https://www.portainer.io/documentation/)
 
 ## Limitations
