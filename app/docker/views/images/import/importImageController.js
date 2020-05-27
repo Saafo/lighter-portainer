@@ -21,11 +21,19 @@ angular.module('portainer.docker').controller('ImportImageController', [
       HttpRequestHelper.setPortainerAgentTargetHeader(nodeName);
       var file = $scope.formValues.UploadFile;
       ImageService.uploadImage(file)
-        .then(function success() {
-          Notifications.success('Images successfully uploaded');
+        .then(function success(msg) {
+          if(typeof msg.data.error !== 'undefined') {
+            Notifications.error('Failure', msg.data.errorDetail, 'test');
+          }else {
+            Notifications.success('Images successfully uploaded');
+          }
         })
         .catch(function error(err) {
-          Notifications.error('Failure', err.message, 'Unable to upload image');
+          if(typeof err.message === 'undefined') {
+            Notifications.error('Failure',err, 'Please specify the signature or certificate of the image');
+          }else {
+            Notifications.error('Failure', err.message, 'Unable to upload image');
+          }
         })
         .finally(function final() {
           $scope.state.actionInProgress = false;
