@@ -6,11 +6,11 @@
 [![Microbadger](https://img.shields.io/microbadger/layers/saafo/lighter-portainer)](http://microbadger.com/images/saafo/lighter-portainer)
 [![Build Status](https://img.shields.io/docker/cloud/automated/saafo/lighter-portainer?color=deepgreen&logo=docker)](https://hub.docker.com/r/saafo/lighter-portainer/builds)
 
-**_lighter-Portainer_** is a web management UI for **_lighterDOCK_**, based on **_Portainer_**.
+[**_`lighter-Portainer`_**](https://github.com/Saafo/lighter-portainer) is a web management UI for [**_`lighterDOCK`_**](https://github.com/Constantine3/lighterDOCK/tree/lighterDOCK), based on [**_`Portainer`_**](https://github.com/portainer/portainer).
 
-**_lighterDOCK_** is a lightweight docker aimed at edge computing gateway/server.
+[**_`lighterDOCK`_**](https://github.com/Constantine3/lighterDOCK/tree/lighterDOCK) is a lightweight docker aimed at edge computing gateway/server.
 
-**_Portainer_** is a lightweight management UI which allows you to **easily** manage your different Docker environments (Docker hosts or Swarm clusters).
+[**_`Portainer`_**](https://github.com/portainer/portainer) is a lightweight management UI which allows you to **easily** manage your different Docker environments (Docker hosts or Swarm clusters).
 **_Portainer_** is meant to be as **simple** to deploy as it is to use. It consists of a single container that can run on any Docker engine (can be deployed as Linux container or a Windows native container, supports other platforms too).
 **_Portainer_** allows you to manage all your Docker resources (containers, images, volumes, networks and more) ! It is compatible with the _standalone Docker_ engine and with _Docker Swarm mode_.
 
