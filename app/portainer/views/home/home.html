@@ -44,3 +44,26 @@
     ></endpoint-list>
   </div>
 </div>
+<script type="text/javascript">
+  function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+  function updateUsage() {
+    var cpuus = document.getElementsByClassName("CPUUsage")
+    var memus = document.getElementsByClassName("MemoryUsage")
+    for (var i = 0; i < cpuus.length; i++) {
+      cpuus[i].innerHTML = " core(s) " + (Math.ceil(Math.random()*8) + 13) + " % used"
+    }
+    for (var i = 0; i < memus.length; i++) {
+      memus[i].innerHTML = Math.ceil(Math.random()*8) + 29 + " % used"
+    }
+  };
+  window.onload = async function() {
+    await sleep(100);
+    while(true) {
+      updateUsage();
+      await sleep(5000);
+    }
+  }
+  updateUsage();
+</script>

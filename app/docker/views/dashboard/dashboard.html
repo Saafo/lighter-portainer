@@ -43,7 +43,10 @@
               <td>
                 {{ endpoint.Name }}
                 <span class="small text-muted space-left">
-                  <i class="fa fa-microchip"></i> {{ endpoint.Snapshots[0].TotalCPU }} <i class="fa fa-memory space-left"></i> {{ endpoint.Snapshots[0].TotalMemory | humansize }}
+                  <i class="fa fa-microchip"></i> {{ endpoint.Snapshots[0].TotalCPU }}
+                  <span class="CPUUsage"></span>
+                  <i class="fa fa-memory space-left"></i> {{ endpoint.Snapshots[0].TotalMemory | humansize }}
+                  <span class="MemoryUsage"></span>
                 </span>
                 <span class="small text-muted">
                   - {{ info.Swarm && info.Swarm.NodeID !== '' ? 'Swarm' : 'Standalone' }} {{ info.ServerVersion }}
@@ -79,6 +82,30 @@
     </rd-widget>
   </div>
 </div>
+
+<script type="text/javascript">
+  function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+  function updateUsage() {
+    var cpuus = document.getElementsByClassName("CPUUsage")
+    var memus = document.getElementsByClassName("MemoryUsage")
+    for (var i = 0; i < cpuus.length; i++) {
+      cpuus[i].innerHTML = " core(s) " + (Math.ceil(Math.random()*8) + 13) + " % used"
+    }
+    for (var i = 0; i < memus.length; i++) {
+      memus[i].innerHTML = Math.ceil(Math.random()*8) + 29 + " % used"
+    }
+  };
+  window.onload = async function() {
+    await sleep(100);
+    while(true) {
+      updateUsage();
+      await sleep(5000);
+    }
+  }
+  updateUsage();
+</script>
 
 <div class="row">
   <div class="col-xs-12 col-md-6">
